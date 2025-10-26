@@ -1,0 +1,149 @@
+.about-section {
+  background-color: #fafafa;
+  padding: 100px 40px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- TEXT ---- */
+.about-text {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 1s ease;
+}
+
+.about-text.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.highlight-primary {
+  color: #00a69c;
+}
+
+.highlight-secondary {
+  color: #ff3399;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.learn-more-btn {
+  background: #ff3399;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #00a69c;
+  transform: scale(1.05);
+}
+
+/* ---- IMAGE ---- */
+.about-image {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 1s ease;
+}
+
+.about-image.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-blob {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+}
+
+.image-inner {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 3s ease-in-out;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.image-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: #00a69c;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: float 5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-container {
+    gap: 40px;
+  }
+
+  .image-badge {
+    width: 80px;
+    height: 80px;
+    font-size: 0.9rem;
+  }
+}
