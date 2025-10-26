@@ -17,7 +17,7 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-white/80">
-              <li className="hover:text-white cursor-pointer transition-colors"><a href="Hero.tsx">Home</a></li>
+              <li className="hover:text-white cursor-pointer transition-colors"><a href="#">Home</a></li>
               <li className="hover:text-white cursor-pointer transition-colors"><a href="https://chutnee.co.uk/menu/">Menu</a></li>
               <li className="hover:text-white cursor-pointer transition-colors"><a href="https://chutnee-1709392623.resos.com/booking?fbclid=PAY2xjawJjLm1leHRuA2FlbQIxMQABp6XclgsrI8NlL8lLSFH-Zv9bzMyEK3jdaUkvdVIhMrSDEd_mme_UZlmwXKaL_aem_u8IS-CMD9pb7NbpM5_Y56g">Reservations</a></li>
               <li className="hover:text-white cursor-pointer transition-colors"><a href="https://chutnee.co.uk/our-story/">About Us</a></li>
